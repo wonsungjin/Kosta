@@ -1,0 +1,16 @@
+package com.kosta.sample.board;
+
+public class ReplyVO {
+	String CREATED;
+	String LAST_DDL_TIME;
+	String SEQUENCE_OWNER;
+	String SEQUENCE_NAME;
+	int MIN_VALUE;
+	int MAX_VALUE;
+	int INCREMENT_BY;
+	String CYCLE_FLAG;
+	String ORDER_FLAG;
+	int CACHE_SIZE;
+	int LAST_NUMBER;
+
+}

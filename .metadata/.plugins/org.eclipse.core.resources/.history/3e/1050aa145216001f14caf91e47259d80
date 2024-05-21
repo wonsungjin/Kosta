@@ -1,0 +1,48 @@
+package com.kosta.sample.board;
+
+public class ReplyVO extends VO{
+	ReplyVO() {};
+	public ReplyVO(String rESQ, String rEPLY, String rEGDATE, String sEQUENCE_NAME, int sEQ) {
+		super();
+		RESQ = rESQ;
+		REPLY = rEPLY;
+		REGDATE = rEGDATE;
+		SEQUENCE_NAME = sEQUENCE_NAME;
+		SEQ = sEQ;
+	}
+	String RESQ;
+	String REPLY;
+	String REGDATE;
+	String SEQUENCE_NAME;
+	int SEQ;
+	public String getRESQ() {
+		return RESQ;
+	}
+	public void setRESQ(String rESQ) {
+		RESQ = rESQ;
+	}
+	public String getREPLY() {
+		return REPLY;
+	}
+	public void setREPLY(String rEPLY) {
+		REPLY = rEPLY;
+	}
+	public String getREGDATE() {
+		return REGDATE;
+	}
+	public void setREGDATE(String rEGDATE) {
+		REGDATE = rEGDATE;
+	}
+	public String getSEQUENCE_NAME() {
+		return SEQUENCE_NAME;
+	}
+	public void setSEQUENCE_NAME(String sEQUENCE_NAME) {
+		SEQUENCE_NAME = sEQUENCE_NAME;
+	}
+	public int getSEQ() {
+		return SEQ;
+	}
+	public void setSEQ(int sEQ) {
+		SEQ = sEQ;
+	}
+}

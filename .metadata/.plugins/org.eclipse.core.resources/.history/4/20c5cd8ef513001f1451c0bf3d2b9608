@@ -1,0 +1,14 @@
+package com.kosta.sample.jdbc;
+import com.kosta.sample.board.*;
+public class BoardTest {
+
+	public static void main(String[] args) {
+		Board bd = new Board();
+		bd.oracleConn();
+		bd.boardSelect();
+		//bd.boardDelete();
+		//bd.oracleColse();
+		
+	}
+
+}

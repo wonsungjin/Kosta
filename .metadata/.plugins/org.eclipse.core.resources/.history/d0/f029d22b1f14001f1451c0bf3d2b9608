@@ -1,0 +1,9 @@
+package com.kosta.sample.board;
+
+public class ReplyVO {
+	String RESQ;
+	String REPLY;
+	String REGDATE;
+	String SEQUENCE_NAME;
+	int SEQ;
+}

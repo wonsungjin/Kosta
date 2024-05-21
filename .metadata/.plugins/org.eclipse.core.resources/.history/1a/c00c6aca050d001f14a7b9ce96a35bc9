@@ -1,0 +1,40 @@
+package com.kosta.sample.qulz1;
+
+class Score {
+    public Score() {
+        System.out.println("국어 영어 수학");
+        System.out.println("--- --- ---");
+    }
+
+    public Score(int[] a) {
+        this();
+        System.out.print(a[0] + " " + a[1] + " " + a[2]);
+    }
+
+    public int subjectAverage() {
+        return 0;
+    }
+
+    public int userCount() {
+        return 0;
+    }
+}
+
+public class Sukang extends Score {
+    private int[] scores = new int[3];
+
+    public Sukang() {
+        super(); // Score 클래스의 기본 생성자 호출
+    }
+
+    public Sukang(int a, int b, int c) {
+        this(); // Sukang 클래스의 기본 생성자 호출
+        scores[0] = a;
+        scores[1] = b;
+        scores[2] = c;
+    }
+
+    public static void main(String[] args) {
+        new Sukang(55, 44, 33);
+    }
+}

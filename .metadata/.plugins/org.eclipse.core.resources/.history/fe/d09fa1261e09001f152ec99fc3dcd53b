@@ -1,0 +1,22 @@
+package com.kosa.sample.shop;
+
+
+public enum st
+{
+	게스트,
+	멤버
+}
+public class User {
+	protected int myPoint =0;
+	protected String myName;
+	orderSystem od = new orderSystem();
+	public void getUserName(String uid)
+	{
+		myName=uid;
+	}
+	public void getCompName()
+	{
+	}
+
+
+}

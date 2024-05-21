@@ -1,0 +1,71 @@
+package com.kosta.lec;
+
+public class Quiz01 {
+
+	public static void main(String[] args) {
+//		int x = 2;
+//		int y =5;
+//		char c = 'A';
+//		System.out.println(y+=10-x++);
+//		System.out.println(x+=2);
+//		System.out.println('C'-c);
+//		System.out.println('5'-'0');
+//		System.out.println(c+1);
+//		System.out.println(++c);
+//		System.out.println(c++);
+//		System.out.println(c);
+//		int score = 70;
+//		switch (score) {
+//		case 90:
+//			System.out.println("A");
+//			break;
+//		case 80:
+//			System.out.println("B");
+//			break;
+//		case 70:
+//			System.out.println("C");
+//			break;
+//		default:
+//			System.out.println("F");}
+
+		
+		
+//		int age = 15;
+//		char gen = 'm';
+//		if (age >= 20 && age <= 29) {
+//			if (gen == 'm')
+//				System.out.println("100");
+//			else
+//				System.out.println("0");
+//		}
+//
+//		else if (age >= 10 && age <= 19) {
+//			if (gen == 'm')
+//				System.out.println("50");
+//			else
+//				System.out.println("0");
+//		} else if (age >= 30 && age <= 39)
+//			System.out.println("0");
+//		else
+//			System.out.println("잘못 입력");
+
+//		for(int i = 2; i<9;i+=2)
+//		{
+//			for(int j = 1; j<7;j++)
+//			{
+//				System.out.print(i*j +"\t");
+//			}
+//				System.out.print("\n");
+//		}		
+		for(int i = 2; i<7;i+=2)
+		{
+			System.out.print(i +"단"+" ");
+			for(int j = 1; j<7;j++)
+			{
+				System.out.print(i +"x"+ j + "=" + i*j +" ");
+			}
+		}		
+		
+	}
+	
+}

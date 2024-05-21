@@ -1,0 +1,40 @@
+package com.kosta.sample.qulz1;
+
+class Score
+{
+	private int [] scores = new int[3];
+	Score s;
+	public Score()
+	{
+		System.out.print("국어" +"영어"+"수학\n");
+		System.out.print("---" +"---"+"---\n");
+		s =new Score(scores[0],scores[1],scores[2]);
+	}
+	public Score(int a,int b,int c)
+	{
+		System.out.print(a+" " + b+" " +c);
+	}
+	public void chageScore(int a,int b)
+	{
+		s.scores[0]=a;
+		s.scores[0]=b;
+		s.scores[0]=c;
+	}
+	
+}
+public class Sukang extends Score {
+	
+	
+	public Sukang(int a,int b, int c) 
+	{
+		chageScore(0,a);
+		chageScore(1,b);
+		chageScore(2,c);
+	}
+	
+	public static void main(String[] args) {
+		new Sukang(55,42,35);
+
+	}
+
+}

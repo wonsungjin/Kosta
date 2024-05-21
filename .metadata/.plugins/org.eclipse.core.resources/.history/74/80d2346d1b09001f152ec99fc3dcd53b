@@ -1,0 +1,23 @@
+package com.kosa.sample.shop;
+
+public class User {
+	public order od = new order();
+	protected final int orderPoint=100;
+	protected int myPoint =0;
+	public void order(int price)
+	{
+		 myPoint += orderPoint;
+		 System.out.println("적립금액 : "+myPoint);
+	}
+
+	public void getUserName(String uid)
+	{
+		
+	}
+	public void getCompName()
+	{
+		
+	}
+
+
+}

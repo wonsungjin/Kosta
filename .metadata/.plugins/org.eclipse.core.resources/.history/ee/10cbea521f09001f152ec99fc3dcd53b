@@ -1,0 +1,12 @@
+package com.kosa.sample.shop;
+import java.util.HashMap;
+
+
+public class orderSystem {
+	protected final int orderPoint=100;
+	HashMap<String,Integer> userPoint = new HashMap();
+	public void order(String name,int price)
+	{
+		 userPoint.put(name,orderPoint);
+	}
+}

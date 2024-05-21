@@ -1,0 +1,14 @@
+package com.kosa.sample.shop;
+
+public class mm {
+
+	public static void main(String[] args) {
+		
+		Guest gt = new Guest();
+		Member mb = new Member();
+		mb.order(100);
+		gt.order(100);
+
+	}
+
+}

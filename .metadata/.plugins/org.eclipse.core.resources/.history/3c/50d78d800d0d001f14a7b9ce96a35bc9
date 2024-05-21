@@ -1,0 +1,45 @@
+package com.kosta.sample.qulz1;
+
+class Score
+{
+	public Score()
+	{
+		System.out.print("국어" +"영어"+"수학\n");
+		System.out.print("---" +"---"+"---\n");
+	}
+	public Score(int[] a)
+	{
+		
+		System.out.print(a[0]+" "+a[1]+" "+a[2]);
+	}
+	public int subjectAverage()
+	{
+		return 0;
+	}
+	public int userCount()
+	{
+		return 0;
+	}
+	
+}
+public class Sukang extends Score {
+	
+	private static int [] scores = new int[3];
+	public Sukang() 
+	{
+		
+	}
+	public Sukang(int a,int b,int c)
+	{
+		super(scores);
+		scores[0]=a;
+		scores[1]=b;
+		scores[2]=c;
+	}
+	
+	public static void main(String[] args) {
+		new Sukang(55,44,33);
+
+	}
+
+}

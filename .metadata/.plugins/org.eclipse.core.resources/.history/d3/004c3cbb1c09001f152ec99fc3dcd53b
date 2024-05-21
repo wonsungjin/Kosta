@@ -1,0 +1,22 @@
+package com.kosa.sample.shop;
+
+public class User {
+	protected int myPoint =0;
+	protected String myName;
+	orderSystem od = new orderSystem();
+	public void order(int price)
+	{
+		 System.out.println("적립금액 : "+myPoint);
+	}
+
+	public void getUserName(String uid)
+	{
+		myName=uid;
+	}
+	public void getCompName()
+	{
+		
+	}
+
+
+}

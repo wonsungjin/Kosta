@@ -1,0 +1,16 @@
+package com.kosa.sample.shop;
+
+public class Member extends User{
+
+	public void getCompName()
+	{
+		
+	}
+	public void order(int price)
+	{
+		 myPoint += orderPoint;
+		 myPoint += price/10;
+		 System.out.println("적립금액 : "+myPoint);
+	}
+
+}

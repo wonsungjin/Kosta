@@ -1,0 +1,9 @@
+package com.kosa.sample.shop;
+
+public class Guest extends User{
+
+	public void getCompName()
+	{
+		
+	}
+}
