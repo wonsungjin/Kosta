@@ -13,4 +13,6 @@
     <fullyQualifiedTypeName name="java.util.HashMap"/>
     <fullyQualifiedTypeName name="java.sql.DriverManager"/>
     <fullyQualifiedTypeName name="com.kosta.sample.json.EmpVO"/>
+    <fullyQualifiedTypeName name="java.lang.System"/>
+    <fullyQualifiedTypeName name="com.kosta.sample.common.MyOracleConnection"/>
 </qualifiedTypeNameHistroy>

@@ -1,0 +1,36 @@
+package com.kosta.sample.user;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.ArrayList;
+
+import com.kosta.sample.common.MyOracleConnection;
+
+public class UserDAO {
+	public int userInsert(UserVO vo)
+	{
+		MyOracleConnection mc = new MyOracleConnection();
+		Connection conn = null;
+		PreparedStatement pstmt = null;
+		ResultSet rs = null;
+		ArrayList<UserVO> list = null;
+		 // set바인딩값타입(1번째물음표에 , 바인딩될값) 	
+		try {
+			conn = mc.oracleConn().getConnection();
+			if(conn != null) System.out.print(true);
+			else System.out.print(false);
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			mc.oracleClose(conn);
+		}
+		return 1;
+	}
+	public boolean userLogin(String userid, String passwd)
+	{
+		boolean userCheck = true; //res = rs.next();
+		return userCheck;
+	}
+}

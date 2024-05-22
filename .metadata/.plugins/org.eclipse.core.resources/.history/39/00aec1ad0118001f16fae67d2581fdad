@@ -1,0 +1,402 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+	      
+		<meta name="subject" content="시스템벤트(주)">
+	<meta name="description" content="시스템벤트(주)">
+	<meta name="keywords" content="시스템벤트(주)">
+	<title>시스템벤트(주)</title>
+
+	<meta property="og:url" content="http://systemvent.website.ne.kr">
+	<meta property="og:type" content="website">
+	<meta property="og:title" content="시스템벤트(주)">
+	<meta property="og:description" content="시스템벤트(주)">
+	<meta property="og:image" content="http://systemvent.website.ne.kr/images/sns_link.png">
+	<link rel="canonical" href="http://systemvent.website.ne.kr">
+	<link rel="shortcut icon" type="image/x-icon" href="/images/favicon.png">
+	<link rel="stylesheet" type="text/css" href="/css/notosanskr.css">
+	<link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="/css/slick.css">
+	<link rel="stylesheet" type="text/css" href="/css/swiper.min.css">
+	<link rel="stylesheet" type="text/css" href="/css/reset.css">	
+	<link rel="stylesheet" type="text/css" href="/css/layout.css">
+	<link rel="stylesheet" type="text/css" href="/css/doc.css">	
+	<link rel="stylesheet" type="text/css" href="/css/board.css">	
+	<link rel="stylesheet" type="text/css" href="/css/responsive.css">
+	
+	<script type="text/javascript" src="/js/jquery-1.11.1.min.js"></script>
+	<script type="text/javascript" src="/js/jquery.ui.js"></script>
+	<script type="text/javascript" src="/js/jquery.easing.1.3.js"></script>
+	<script type="text/javascript" src="/js/jquery.gnb.js"></script>
+	<script type="text/javascript" src="/js/jquery.rwdImageMaps.min.js"></script>
+	<script type="text/javascript" src="/js/slick.min.js"></script>
+	<script type="text/javascript" src="/js/swiper.min.js"></script>	
+	<script type="text/javascript" src="/fancybox/lib/jquery.mousewheel-3.0.6.pack.js"></script>
+	<script type="text/javascript" src="/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+	<link rel="stylesheet" type="text/css" href="/fancybox/source/jquery.fancybox.css?v=2.1.5" media="screen">
+	<script type="text/javascript" src="/js/script.js"></script>
+	<!--[if lte IE 9]
+		<script src="/js/html5.js"></script>
+	<![endif]-->	
+</head>
+<body id="main">
+<div id="skipToContent">
+	<a href="#container">본문 바로가기</a>
+	<a href="#gnb">주메뉴 바로가기</a>
+</div>
+<div id="wrapper"> 
+	<!-- // header -->
+    <div id="header">
+		<div class="contain">
+			<h1 class="sitelogo"><a href="/index.php"><img src="/images/common/logo.png" alt="시스템벤트(주)"></a></h1>	
+			<div id="gnb" class="gnb">
+				<ul>
+					<li><a href="/sub/sub01_01.php">회사소개</a>
+						<div class="submenu">
+							<ul>
+								<li><a href="/sub/sub01_01.php">인사말</a></li>
+								<li><a href="/sub/sub01_02.php">연혁</a></li>
+								<li><a href="/sub/sub01_03.php">조직도</a></li>
+								<li><a href="/sub/sub01_04.php">비전</a></li>
+								<li><a href="/sub/sub01_05.php">고객사</a></li>
+								<li><a href="/sub/sub01_06.php">오시는 길</a></li>
+							</ul>
+						</div>
+					</li>
+										<li><a href="/sub/sub02_01.php?cat_no=1">제품소개</a>
+						<div class="submenu">
+							<ul>
+
+																<li><a href="/sub/sub02_01.php?cat_no=1">공조용 환기 시스템</a></li>
+																<li><a href="/sub/sub02_01.php?cat_no=2">주차장 환기 시스템</a></li>
+																<li><a href="/sub/sub02_01.php?cat_no=3">환기 및 제연겸용 <br> Axivent 시스템</a></li>
+																<li><a href="/sub/sub02_01.php?cat_no=4">주택 환기 시스템</a></li>
+																<li><a href="/sub/sub02_01.php?cat_no=5">Smart Eco <br> Ventilation 시스템</a></li>
+																<li><a href="/sub/sub02_01.php?cat_no=6">Special 제품</a></li>
+								
+							</ul>
+						</div>
+					</li>
+					<li><a href="/sub/sub03_01.php">기술현황</a>
+						<div class="submenu">
+							<ul>
+								<li><a href="/sub/sub03_01.php">기술자료</a></li>
+								<li><a href="/sub/sub03_02.php">인증서 및 특허</a></li>
+							</ul>
+						</div>
+					</li>
+					<li><a href="/sub/sub04_01.php">홍보센터</a>
+						<div class="submenu">
+							<ul>
+								<li><a href="/sub/sub04_01.php">홍보영상</a></li>
+								<li><a href="/sub/sub04_02.php">카다로그</a></li>
+								<li><a href="/sub/sub04_03.php">갤러리</a></li>
+							</ul>
+						</div>
+					</li>
+					<li><a href="/sub/sub05_01.php">고객지원</a>
+						<div class="submenu">
+							<ul>
+								<li><a href="/sub/sub05_01.php">공지사항</a></li>
+								<li><a href="/sub/sub05_02.php">문의사항</a></li>
+							</ul>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<div class="lang">
+				<ul>
+					<li class="active"><a href="/index.php">KR</a></li>
+					<li><a href="/en/index.php">EN</a></li>
+				</ul>
+			</div>
+			<a href="#menu" class="btn-m-menu"><span></span><strong>MENU</strong></a>
+		</div>
+		<div class="submenu-bg"></div>
+	</div>	
+
+	<!-- for mobile -->
+	<div id="menu" class="mobile-navigation">
+		<div class="home"><a href="/index.php">HOME</a></div>		
+		<nav class="nav-menu"></nav>
+		<a href="javascript:void(0);" class="close" title="닫기"></a>
+	</div>
+	<div class="mobile-overlay"></div>
+	<!-- header //--><script language="javascript">
+function setCookie( name, value, expiredays ){
+	var todayDate = new Date();
+	todayDate.setDate( todayDate.getDate() + expiredays );
+	document.cookie = name + "=" + escape( value ) + "; path=/; expires=" + todayDate.toGMTString() + ";"
+}
+
+function getCookie( name ){
+	var nameOfCookie = name + "=";
+	var x = 0;
+	while ( x <= document.cookie.length ) {
+		var y = (x+nameOfCookie.length);
+		if ( document.cookie.substring( x, y ) == nameOfCookie ) {
+			if ( (endOfCookie=document.cookie.indexOf( ";", y )) == -1 ) endOfCookie = document.cookie.length;
+			return unescape( document.cookie.substring( y, endOfCookie ) );
+		}
+		x = document.cookie.indexOf( " ", x ) + 1;
+		if ( x == 0 ) break;
+	}
+	return "";
+}
+</script>
+
+<div id="container">
+	<link href="/common/lib/videojs/video-js.min.css" rel="stylesheet">
+	<link href="/common/lib/videojs/forest.css" rel="stylesheet">
+	<script src="/common/lib/videojs/video.min.js"></script>
+	<script src="/common/lib/videojs/videojs-hlsjs-plugin.js"></script>
+	<script src="https://player.vimeo.com/api/player.js"></script>
+	<script src="https://www.youtube.com/iframe_api"></script>
+	<div class="main-visual">
+		<div class="items">
+			<div class="item video">
+				<div class="backgroud"></div>
+				<div class="video-area">
+					<video id="main_visual_vod_0"class="video-js vjs-theme-forest embed-player" volume="0" autoplay muted playsinline>
+						<source src="/main.mp4" type="video/mp4">
+					</video>
+					<script>var main_visual_vod_0 = videojs("main_visual_vod_0");</script>
+				</div>
+				<div class="caption">
+					<div class="contain">
+						<h2>We Bring Air Technology To The Life!</h2>
+						<p><span>진심을 다하는 기업</span> <span>가치를 전달하는 기업</span> <span>시스템벤트 입니다</span></p>
+					</div>
+				</div>
+			</div>
+			<!-- <div class="item">
+				<img src="/en/images/main/mv1.jpg" alt="">
+			</div> -->
+		</div>
+	</div>
+	<script src="/js/main.js"></script>
+	<div class="main-product">
+		<div class="contain">
+			<div class="background"></div>
+			<div class="inner">
+				<h2 class="m-head">Products</h2>
+				<div class="slider">
+					<div class="product-list">
+						<ul>
+							<!-- <li class="none">등록된 게시글이 없습니다.</li> -->
+								    <li>
+			<a href="../sub/sub02_01.php?mode=view&cat_no=1&idx=1&offset=" title="Sirocco Fan">
+				<div class="thumb"><img src="/uploaded/product/1/l_large_3d19c250770a371cb4987a1ea307ae3d0.jpg" alt="Sirocco Fan"></div>
+				<div class="tit">Sirocco Fan</div>
+			</a>
+		</li>
+
+
+
+	    <li>
+			<a href="../sub/sub02_01.php?mode=view&cat_no=4&idx=20&offset=" title="Hybrid Roof Fan">
+				<div class="thumb"><img src="/uploaded/product/20/l_large_d0afa6c5aeb5d08e726cd787e198a2560.jpg" alt="Hybrid Roof Fan"></div>
+				<div class="tit">Hybrid Roof Fan</div>
+			</a>
+		</li>
+
+
+
+	    <li>
+			<a href="../sub/sub02_01.php?mode=view&cat_no=3&idx=18&offset=" title="Smoke Spill Axial Fan">
+				<div class="thumb"><img src="/uploaded/product/18/l_large_11d154b878966c5b84165ea5d200ab1e0.png" alt="Smoke Spill Axial Fan"></div>
+				<div class="tit">Smoke Spill Axial Fan</div>
+			</a>
+		</li>
+
+
+
+	    <li>
+			<a href="../sub/sub02_01.php?mode=view&cat_no=2&idx=9&offset=" title="F.D Slim Fan">
+				<div class="thumb"><img src="/uploaded/product/9/l_large_2d0f783b42abb870d0fd780b1d3e74250.jpg" alt="F.D Slim Fan"></div>
+				<div class="tit">F.D Slim Fan</div>
+			</a>
+		</li>
+
+
+
+						</ul>
+					</div>
+				</div>
+				<a href="/sub/sub02_01.php" class="btn-more">제품소개 <i class="ico"></i></a>
+			</div>
+		</div>
+	</div>
+	<div class="main-about">
+		<div class="contain">
+			<div class="left"><img src="/images/main/main_about.png" alt=""></div>
+			<div class="right">
+				<h2 class="m-head">Fresh Air &amp; Better Future! <br>
+				We Make It <br>We Are Systemvent</h2>
+				<div class="txt">
+					<p>
+						1999년 지하주차장 환기 시스템 제조업체로 출발한 <br>
+						시스템벤트는 주택 환기, 제연 환기, 대공간 환기 등 다양한 관기 분야로 <br>
+						사업영역을 확대하며 이 분야 강소기업으로 성장했습니다.
+					</p> <br>
+					<p>특허 등 30여 건의 지적재산권과 ISO9001/ISO14001 인증, <br>
+					KS 인증, AMCA Membership 등록 등 다수의 국내외 품질 인증을 통해 <br>
+					그 기술력을 인정받고 있습니다.</p>
+				</div>
+				<a href="/sub/sub01_01.php" class="btn-more">회사소개 <i class="ico"></i></a>
+			</div>
+		</div>
+	</div>
+	<div class="main-notice">
+		<div class="contain">
+			<h2 class="m-head">기업소식</h2>
+			<div class="list">
+				
+
+<div class="box">
+	<a href="/sub/sub05_01.php?boardid=notice&mode=view&idx=8&category=" title="제목">
+		<div class="date">Feb. 2023</div>
+		<div class="tit">시스템벤트(주) 포스코 건설과 함께 탄소산정체계 구축 업무 협약식 체결</div>
+		<div class="txt">시스템벤트㈜ 포스코건설과 함께 탄소산정체계 구축을 위한 업무 협약식 체결&nbsp;시스템벤트㈜는 지난 2022년 11월 2일 탄소 감축과 저탄소 BIZ&nbsp;확대를 위한 자체 전략을 추진중인 포스코 건설과 함께 &lsquo;건축용 송풍기 탄소산정체계 구축&rsquo;과 관련한 업무 협약을 체결하였습니다.2000년 이후 지속 가능한 경영을 목표로 기업의 산업 구조를 변화시킬 새로운 글로벌 가치로 떠오른 ESG&nbsp;이슈에 깊은 관심을 가진 경영진의 결정에 따라 이루어진 것으로서 친환경 책임 활동으로 기업 가치를 평가받음으로서 사회적/&nbsp;윤리적 의무를 솔선하여 실천하고자 하는 노력의 일환입니다.&nbsp;구체적인 실천 방안으로서 포스코건설로부터 향후 2년간&nbsp;1900대의 건축용 송풍기 제작을 의뢰 받아 제작 기간 중인 4개월 동안 맞춤형으로 CFP(Carbon Foot Print)를 사정하여 탄소가 얼마나 배출되는 지 확인하게 되며,&nbsp;기업신용평가 전문 기관인 이크레더블(Ecredible Co., Ltd.)로부터 제품 제작의 전 과정(Life Cycle Assessment)에서 발생하는 탄소 배출량을 산정 받게 됩니다.&nbsp;&nbsp;송풍기 커버 재질을 기존 일반 철판에서 포스코 프리미엄 강판인 포스맥(PosMAC)으로 바꾸고,&nbsp;용접/&nbsp;도장 등이 불필요한 Pittsburgh Folding&nbsp;방식으로 변경함으로써 제작 과정 중 발생하는 온실가스 배출량을 약 90%까지 감축할 계획입니다.&nbsp;이번 협약을 통해 2년간 포스코건설에 납품하는 송풍기 제작 과정에서 발생하는 이산화탄소 중 24.9Tco2(이산화탄소톤)을 줄일 수 있을 것으로 전망합니다.&nbsp;이는 20년된 소나무 약 6,284그루가 연간 탄소를 흡수할 수 있는 양입니다.&nbsp;대한민국 대표 건설사와의 모범적인 친환경 협업을 주도하여 향후 자체적으로 탄소배출량을 관리하고 환경부에서 발급하는 환경성적표지 인증을 받을 수 있도록 지속적인 노력을 기울임으로서,&nbsp;지난 2월 EU&nbsp;집행위원회에서 발표한 공급망 실사지침&nbsp;(Directive on Corporate Sustainability Due Diligence)에 범국가적으로 선제적인 대응을 하는데 일조할 계획입니다.&nbsp;협력사 ESG 평가 체계를 도입하여 환경 및 안전 부문에 중점을 두고, 공급망 체질 개선을 진행 중인 포스코건설은 지난해 건설사 최초로 &lsquo;공사 협력사 ESG 평가 모형&rsquo; 개발 후 모든 등록업체 평가를 완료했고, 안전에 취약한 협력사는 컨설팅을 통해 ESG 역량 강화를 지원하고 있습니다. 지난 7월에는 &lsquo;설비 제조 협력사 ESG 평가 모형&rsquo;을 구축하고 환경 영향도를 고려하여 단계적으로 설비 협력사들을 평가함으로써 전반적인 공급망 관점의 탄소 배출 저감 및 에너지 효율 향상을 위해 노력하고 있으며 이에 맞추어 시스템벤트는 그 가치를 함께 실천하는 핵심 파트너로서의 역할을 다할 것입니다.</div>
+		<div class="view">Details</div>
+	</a>
+</div>
+
+
+<div class="box">
+	<a href="/sub/sub05_01.php?boardid=notice&mode=view&idx=7&category=" title="제목">
+		<div class="date">Feb. 2023</div>
+		<div class="tit">송영준 부사장 미니 인터뷰</div>
+		<div class="txt">[Mar. 2022]시스템벤트가 LH&nbsp;동반성장 지원사업을 통해 &lsquo;ECO&nbsp;지하주차장 환기 시스템&rsquo;을 개발하던 당시는 미세 먼지 문제로 온 나라가 시끌 벅적 하던 때였다.&nbsp;미세먼지 문제가 가장 큰 사회적 이슈로 떠오르면서 각 건설사에서는 미세먼지 절감 대책 방안에 더욱 집중하기 시작했고,&nbsp;시스템벤트는 시기 적절한 지원 사업 참여를 통해 향후 시장을 주도할 수 있는 기술 개발에 성공했다.&nbsp;&ldquo;앞으로는 저희가 가진 기술력을 바탕으로 주방, 화장실, 냉난방 등 세대 내 주거 공간에 대한 환기 시스템 개발에도 적극적으로 나설 계획입니다. 특히 현재는 주방과 화장실을 별도로 분리한 배기 시스템이 주로 쓰이고 있는데, 저희는 집안의 압력 밸런스를 효율적으로 조절해 주방과 화장실의 배기를 하나의 시스템으로 묶어주는 기술 개발에 초점을 맞추고 있습니다. 세대 환기 제품에서 기술력 못지않게 중요한 요소인 디자인과 마케팅 분야에도 더욱 힘을 쏟을 계획 입니다.</div>
+		<div class="view">Details</div>
+	</a>
+</div>
+
+
+<div class="box">
+	<a href="/sub/sub05_01.php?boardid=notice&mode=view&idx=6&category=" title="제목">
+		<div class="date">Feb. 2023</div>
+		<div class="tit">시스템벤트, '2021년 설비 신기술 대회' 회장상 수</div>
+		<div class="txt">시스템벤트,&nbsp;한국설비기술협회 주관 &lsquo;2021년 설비 신기술 대회&rsquo;&nbsp;회장상 수상설비 분야의 우수한 신기술 및 제품 개발을 장려해 국가 산업 발전에 이바지하고자 2012년 신설된,&nbsp;한국설비기술협회가 주최하고 국토교통부가 후원하는 &lsquo;2021년 설비신기술대회&rsquo;에서 시스템벤트가 &lsquo;지하주차장 미세먼지 제거 Smart ECO Ventilation System&rsquo;&nbsp;기술을 선보여 본회 회장상을 수상하였습니다.2016년&nbsp;WHO의 보고에 따르면,&nbsp;세계 인구의 92%&nbsp;이상이 대기 오염에 영향을 받고 있고 세계 인구 6명 중 1명은 환경 오염으로 사망한다고 발표할 정도로 대기 환경이 인류의 건강에 치명적인 영향을 미치는 것은 자명한 사실입니다.&nbsp;미세먼지는 산불,&nbsp;황사 등과 같은 자연 현상에 의해 발생되긴 하지만 대부분 석유,&nbsp;석탄과 같은 화석 연료를 태우거나 자동차 매연 가스에서 나오는 대기 오염 물질에서 유발되는 것으로 알려져 있습니다.&nbsp;아황산가스,&nbsp;일산화탄소,&nbsp;이산화탄소,&nbsp;미세먼지,&nbsp;오존 및 납으로 인해 오염되는 대기로 매년 600만명이 목숨을 잃는 것으로 추산됩니다.&nbsp;지속적인 신기술 개발과 최신의 자체 생산 설비를 보유하여 국내뿐 아니라 글로벌 환기 시장에서 그 역량을 입증하고 있는 시트템벤트는 최적의 기술을 활용한 환기시스템의 개발을 통해 안전한 공간을 조성하기 위한 연구에 집중하였습니다.주거 공간인 공동 주택의 부속 시설에 유해물질이 유입되는 것을 차단하고,&nbsp;지하주차장 내에서 자동차의 움직임에 따라 발생하는 배기 가스를 제거하는 환기시스템을 연구하였으며,&nbsp;핵심 목표는 지하주차장의 지능형 ECO&nbsp;환기시스템의 구축 기술 선점/&nbsp;구현 기술 개발/&nbsp;관제 시스템 및 스마트웹을 통해 관리자와 입주자에게 자료를 제공하는 것으로 정하고,&nbsp;총 네 단계로 개발 내용을 구성하였으며,&nbsp;각 단계별 상세 사항은 아래와 같습니다.1단계:&nbsp;지하주차장으로 초미세 오염물질이 유입되는 것을 차단하는 기술2단계:&nbsp;외기의 초미세먼지 농도가 높아 주 출입구에 설치된 차단 도어가 폐쇄되었을 때,&nbsp;밀폐된 지하주차장에서 국소적으로 상승하는 오염물질을 효과적으로 제거하기 위해 급기 타워를 통해 유입되는 외기의 공기질을 최적화 시키는 기술3단계:&nbsp;에너지 절감 차원으로 지하주차장을 존(zone)&nbsp;별로 구획하여&nbsp;CO&nbsp;센서 또는 미세먼지 센서를 설치하여 국소적으로 발생된 오염물질을 감지된 구역에 대해서만 환기를 수행할 수 있도록 하는 조닝 제어 기술4단계: 1/2/3단계에서 개발된 기술을 종합하여 미세먼지 유무에 관계없이 에너지 절약과 친환경 공간을 동시에 구현할 수 있는 총괄적인 &lsquo;미세먼지 제거 Smart ECO&nbsp;지하주차장&rsquo;&nbsp;기술&nbsp;이는 시스템벤트의 우수한 전문 인력의 연구 개발을 통해 이루어진 신기술로서 기술적인 측면과 경제 산업적 측면의 효과를 동시에 기대할 수 있고, 한국토지주택공사에서 시행한 중소기업 기술 개발 지원사업으로 이루어진 기술입니다.</div>
+		<div class="view">Details</div>
+	</a>
+</div>
+			</div>
+			<a href="/sub/sub05_01.php" class="btn-more">바로가기 <i class="ico"></i></a>
+		</div>
+	</div>
+	<div class="main-location">
+		<div class="flex-div">
+			<div class="left">
+				<div class="contain">
+					<div class="inner">
+						<h2 class="m-head">오시는 길</h2>
+						<div class="location-tab">
+							<ul class="tabs">
+								<li data-tab="tab1"><a href="#tab1">본사 &amp; 공장</a></li>
+								<li data-tab="tab2"><a href="#tab2">서울영업소</a></li>
+							</ul>
+						</div>
+						<div class="location-info">
+							<div id="tab1" class="tab-content">
+								<div class="row">
+									<p>경기도 양주시 광적면 부흥로 925번길 185-10</p>
+								</div>
+								<div class="row">
+									<div class="col">
+										<strong class="tt">대표번호</strong>
+										<p>031-837-4501</p>
+									</div>
+									<div class="col">
+										<strong class="tt">팩스</strong>
+										<p>031-837-4509</p>
+									</div>
+								</div>
+							</div>
+							<div id="tab2" class="tab-content">
+								<div class="row">
+									<p>서울시 노원구 노원로 15길 10 하계테크노타운 A동 801호</p>
+								</div>
+								<div class="row">
+									<div class="col">
+										<strong class="tt">대표번호</strong>
+										<p>02-949-6011</p>
+									</div>
+									<div class="col">
+										<strong class="tt">팩스</strong>
+										<p>02-949-6088</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="right">
+				<div id="tab1-map" class="loc-map">
+					<div id="daumRoughmapContainer1673331814278" class="root_daum_roughmap root_daum_roughmap_landing"></div>
+				</div>
+				<div id="tab2-map" class="loc-map">
+					<div id="daumRoughmapContainer1673331862327" class="root_daum_roughmap root_daum_roughmap_landing"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script>
+		$(document).ready(function() {
+			$(".loc-map").eq(0).addClass("active");
+			$(".location-tab ul li").click(function() {
+				var activeTab = $(this).attr('data-tab');
+				$(".loc-map").removeClass("active");
+				$('#' + activeTab + '-map').addClass('active');
+			})
+		});
+	</script>
+	<script charset="UTF-8" class="daum_roughmap_loader_script" src="https://ssl.daumcdn.net/dmaps/map_js_init/roughmapLoader.js"></script>
+	<script charset="UTF-8">
+		new daum.roughmap.Lander({
+			"timestamp" : "1673331814278",
+			"key" : "2ddkd",
+			"mapWidth" : "960",
+			"mapHeight" : "500"
+		}).render();
+
+		new daum.roughmap.Lander({
+			"timestamp" : "1673331862327",
+			"key" : "2ddkg",
+			"mapWidth" : "960",
+			"mapHeight" : "500"
+		}).render();
+	</script>
+</div>
+
+
+
+	<div id="footer" class="footer">
+		<div class="contain">
+			<div class="comp-name">시스템벤트</div>
+			<address>
+				<span>경기도 양주시 광적면 부흥로 925번길 185-10</span> <br>
+				<span>대표자 : 안정헌</span> <span>본사 &amp; 공장 : 031-837-4501</span>
+				<span>서울영업소 : 02-949-6011</span> <span>E-mail : systemvent@chol.com</span>
+			</address>
+			<div class="bottom">
+				<div class="copyright">Copyright &copy; SYSTEM VENT. All rights reserved. <span class="bar">ㅣ</span> <a href="https://www.website.co.kr/" target="_blank">Designed by Website.co.kr</a></div>
+				<div class="foot-links">
+					<a href="/sub/pop_privacy.html" class="pop_privacy">개인정보처리방침</a>
+				</div>
+			</div>
+			<a href="#wrapper" class="scroll-top"><span>TOP</span></a>
+		</div>
+	</div>
+</div>
+</body>
+</html>

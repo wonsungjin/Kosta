@@ -1,0 +1,43 @@
+package com.kosta.sample.user;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.ArrayList;
+
+import com.kosta.sample.common.MyOracleConnection;
+
+public class UserDAO {
+	public int userInsert(UserVO vo)
+	{
+		MyOracleConnection mc = new MyOracleConnection();
+		Connection conn = null;
+		PreparedStatement pstmt = null;
+		ResultSet rs = null;
+		try {
+			conn = mc.oracleConn().getConnection();
+			String sql = "insert into board values(users_seq.nextval,?,?,?,?,?)";
+			pstmt = conn.prepareStatement(sql);
+			pstmt.setInt(1, vo.getSeq());
+			pstmt.setString(2, vo.getUserid());
+			pstmt.setString(3, vo.getPasswd());
+			pstmt.setString(4, vo.getUname());
+			pstmt.setString(5, vo.getUemail());
+			pstmt.setString(6, vo.getRegdate());
+			System.out.print(vo.getSeq()+" "+vo.getUserid()+" "+vo.getPasswd()+" "+vo.getUname()+" "+vo.getUemail()+" "+vo.getRegdate()+" ");
+			if(conn != null) System.out.print(true);
+			else System.out.print(false);
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			mc.oracleClose(conn);
+		}
+		return 1;
+	}
+	public boolean userLogin(String userid, String passwd)
+	{
+		boolean userCheck = true; //res = rs.next();
+		return userCheck;
+	}
+}

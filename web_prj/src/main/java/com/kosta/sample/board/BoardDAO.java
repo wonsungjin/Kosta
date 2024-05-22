@@ -6,6 +6,8 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
+import com.kosta.sample.common.MyOracleConnection;
+
 public class BoardDAO {
 	public int boardDelete(int seq) {
 		MyOracleConnection mc = new MyOracleConnection();
@@ -26,27 +28,57 @@ public class BoardDAO {
 		return delCount;
 	}
 	
-	public int boardInsert() {
-		//seq       *title *contents *regid            regdate
-		//nextval                    session,cookies   sysdate  
-
+	public int boardInsert(BoardVO bvo) {
+		// seq *title *contents *regid regdate
+		// nextval session,cookies sysdate
+		Connection conn = null;
+		PreparedStatement pstmt = null;
 		int insertRows = 0;
+		MyOracleConnection mc = new MyOracleConnection(); // 클래스 분리시켜놓아서 인스턴스 생성해서 사용
 
-		String sql = "insert into board values(board_seq.nextval,?,?,?,sysdate)";
+		try {
+			// ---------------DBCP를 사용한 DB 연결 -----------------------
+			// conn = moc.oracleConn();
+			conn = mc.oracleConn().getConnection();
 
+			String sql = "insert into board values(board_seq.nextval,?,?,?,sysdate)";
+			pstmt = conn.prepareStatement(sql);
+			pstmt.setString(1, bvo.getTITLE());
+			pstmt.setString(2, bvo.getCONTENTS());
+			pstmt.setString(3, bvo.getREGID());
+			insertRows = pstmt.executeUpdate();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			mc.oracleClose(conn, pstmt);
+		}
 		return insertRows;
 	}
 
-	//public int boardUpdate(String title, String contetns, String regdate ) {
-
+	// public int boardUpdate(String title, String contetns, String regdate ) {
 	public int boardUpdate(BoardVO bvo) {
-
+		Connection conn = null;
+		PreparedStatement pstmt = null;
 		int updateRows = 0;
+		MyOracleConnection mc = new MyOracleConnection(); // 클래스 분리시켜놓아서 인스턴스 생성해서 사용
 
-		String sql = "update board set title=?, contents=? where seq=?";
+		try {
+			// ---------------DBCP를 사용한 DB 연결 -----------------------
+			// conn = moc.oracleConn();
+			conn = mc.oracleConn().getConnection();
 
+			String sql = "update board set title=?, contents=? where seq=?";
+			pstmt = conn.prepareStatement(sql);
+			pstmt.setString(1, bvo.getTITLE());
+			pstmt.setString(2, bvo.getCONTENTS());
+			pstmt.setInt(3, bvo.getSEQ());
+			updateRows = pstmt.executeUpdate();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			mc.oracleClose(conn, pstmt);
+		}
 		return updateRows;
-
 	}
 	public ArrayList<BoardVO> boardSelect() {
 		MyOracleConnection mc = new MyOracleConnection();

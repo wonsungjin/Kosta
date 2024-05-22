@@ -2,3 +2,14 @@
 1716275937624	Rename resource 'index수업.html'
 1716275951424	Rename resource 'indexlec.html'
 1716276118490	Rename resource 'lec_servet_call.jsp'
+1716340846054	Move 'lec_servlet_call.jsp' to 'resources'
+1716340858939	Move 'HelloJSP.jsp' to 'WEB-INF'
+1716340869556	Delete element
+1716340917104	Move 'lec_servlet_call.jsp' to 'webapp'
+1716341293622	Rename resource 'register.html'
+1716341299047	Rename resource 'index.html'
+1716341436435	Rename resource 'login.html'
+1716347378272	Move file
+1716347396644	Move compilation unit
+1716347426143	Move 'lec_servlet_call.jsp' to 'webapp'
+1716358096102	Delete element
