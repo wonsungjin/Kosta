@@ -92,8 +92,8 @@ public class MyOracleConnection {
 	public static void main(String[] args) {
 		BoardDAO bd = new BoardDAO();
 		BoardVO bvo = bd.boardReplySelect(1);
-		int seq = bvo.getSEQ();
-		String title = bvo.getTITLE();
+		int seq = bvo.getSeq();
+		String title = bvo.getTitle();
 		System.out.println(seq + "\t" + title);
 		List<ReplyVO> rlist = bvo.getReplies();
 

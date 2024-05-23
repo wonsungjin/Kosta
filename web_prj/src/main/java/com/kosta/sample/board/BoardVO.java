@@ -5,10 +5,10 @@ import java.util.List;
 public class BoardVO extends VO {
 
 	int SEQ;
-	String TITLE;
-	String CONTENTS;
-	String REGID;
-	String REGDATE;
+	String title;
+	String contents;
+	String regid;
+	String regdate;
 	List<ReplyVO> replies;
 	public List<ReplyVO> getReplies() {
 		return replies;
@@ -16,48 +16,48 @@ public class BoardVO extends VO {
 	public void setReplies(List<ReplyVO> replies) {
 		this.replies = replies;
 	}
-	public int getSEQ() {
+	public int getSeq() {
 		return SEQ;
 	}
-	public void setSEQ(int sEQ) {
+	public void setSeq(int sEQ) {
 		SEQ = sEQ;
 	}
-	public String getTITLE() {
-		return TITLE;
+	public String getTitle() {
+		return title;
 	}
-	public void setTITLE(String tITLE) {
-		TITLE = tITLE;
+	public void setTitle(String tITLE) {
+		title = tITLE;
 	}
-	public String getCONTENTS() {
-		return CONTENTS;
+	public String getContents() {
+		return contents;
 	}
-	public void setCONTENTS(String cONTENTS) {
-		CONTENTS = cONTENTS;
+	public void setContents(String cONTENTS) {
+		contents = cONTENTS;
 	}
-	public String getREGID() {
-		return REGID;
+	public String getRegid() {
+		return regid;
 	}
-	public void setREGID(String rEGID) {
-		REGID = rEGID;
+	public void setRegid(String rEGID) {
+		regid = rEGID;
 	}
-	public String getREGDATE() {
-		return REGDATE;
+	public String getRegdate() {
+		return regdate;
 	}
-	public void setREGDATE(String rEGDATE) {
-		REGDATE = rEGDATE;
+	public void setRegdate(String rEGDATE) {
+		regdate = rEGDATE;
 	}
 	public BoardVO(String cONTENTS, String tITLE, int sEQ, String rEGID, String rEGDATE) {
 		SEQ = sEQ;
-		TITLE = tITLE;
-		CONTENTS = cONTENTS;
-		REGID = rEGID;
-		REGDATE = rEGDATE;
+		title = tITLE;
+		contents = cONTENTS;
+		regid = rEGID;
+		regdate = rEGDATE;
 	}
 	public BoardVO( String tITLE, int sEQ, String rEGID, String rEGDATE) {
 		SEQ = sEQ;
-		TITLE = tITLE;
-		REGID = rEGID;
-		REGDATE = rEGDATE;
+		title = tITLE;
+		regid = rEGID;
+		regdate = rEGDATE;
 	}
 	public BoardVO() {
 	}

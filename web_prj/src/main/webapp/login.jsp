@@ -22,7 +22,7 @@
                                 <div class="card shadow-lg border-0 rounded-lg mt-5">
                                     <div class="card-header"><h3 class="text-center font-weight-light my-4">Login</h3></div>
                                     <div class="card-body">
-                                        <form method="post" action="/UserServlet">
+                                        <form method="post" action="<%=request.getContextPath()%>/UserServlet">
                                         <input type = "hidden" name="pagecode" value="P002">
                                             <div class="form-floating mb-3">
                                                 <input name = "userid" class="form-control" id="inputID" type="text" placeholder="name@example.com" />

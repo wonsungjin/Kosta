@@ -10,6 +10,7 @@
 <!-- <a href =  "https://localhost:8081/board_servlet_url">서블릿 GET 방식 호출</a><br> -->
 <a href =  "/board_servlet_url">서블릿 GET 방식 호출</a><br>
 <form method = "get" action = "/board_servlet_url">
+<input name = "userid" type = "text" value ="서블릿 GET 방식 호출">
 <input type = "submit" value ="서블릿 GET 방식 호출">
 </form><br><br>
 

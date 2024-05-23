@@ -45,17 +45,19 @@ public class UserDAO {
 		ResultSet rs = null;
 		try {
 				conn = mc.oracleConn().getConnection();
-				String sql = "select uname,email,userid from users where userid = ? and passwd = ?";
+				String sql = "select * from users where userid = ? and passwd = ?";
 				pstmt = conn.prepareStatement(sql);
 				pstmt.setString(1, userid);
 				pstmt.setString(2, passwd);
 				rs = pstmt.executeQuery();
 				while (rs.next() == true) 
 				{
+					vo = new UserVO();
 					vo.setUname(rs.getString("uname"));
 					vo.setUemail(rs.getString("email"));
 					vo.setUserid(rs.getString("userid"));
-				System.out.println(rs.getString("uname") +" "+rs.getString("email")+" "+rs.getString("userid"));
+					vo.setGrade(rs.getString("grade"));
+				System.out.println(rs.getString("uname") +" "+rs.getString("email")+" "+rs.getString("userid")+" "+rs.getString("grade"));
 				}
 			} catch (SQLException e) {
 				e.printStackTrace();

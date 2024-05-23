@@ -6,25 +6,26 @@
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
-		<item key="selection" value=""/>
+		<item key="selection" value="setCharacterEncodingFilter"/>
 		<list key="findhistory">
-			<item value="regdate"/>
-			<item value="index"/>
-			<item value="Login.html"/>
-			<item value="register.html"/>
-			<item value="register."/>
-			<item value="register.jsp"/>
-			<item value="legister.jsp"/>
-			<item value="Login."/>
-			<item value="Login.jsp"/>
-			<item value="select"/>
-			<item value="float"/>
-			<item value="double"/>
-			<item value="//&#x09;&#x09;int x = 2;"/>
-			<item value="&#x09;for (; j &lt; i; j--) {"/>
-			<item value="&#x0D;&#x0A;&#x09;&#x09;for(;j&lt;9;j+=2)&#x0D;&#x0A;&#x09;&#x09;System.out.print(j + &quot;단     &quot;);&#x0D;&#x0A;&#x09;&#x09;System.out.print(&quot;\n&quot;);"/>
+			<item value="setCharacterEncodingFilter"/>
+			<item value="tables.jsp"/>
+			<item value="tables"/>
+			<item value="table"/>
+			<item value="board"/>
+			<item value="borad"/>
+			<item value="tables."/>
+			<item value="tables.html"/>
+			<item value="Login"/>
+			<item value="Login out"/>
+			<item value="/Login.jsp"/>
+			<item value="/Login.jsp&apos;"/>
+			<item value="/servlet"/>
+			<item value="/"/>
+			<item value="servlet"/>
 		</list>
 		<list key="replacehistory">
+			<item value="tables.jsp"/>
 			<item value="Login.jsp"/>
 			<item value="register.jsp"/>
 			<item value="double"/>
@@ -32,7 +33,7 @@
 		</list>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
-		<item key="DIALOG_X_ORIGIN" value="-234"/>
+		<item key="DIALOG_X_ORIGIN" value="8"/>
 		<item key="DIALOG_Y_ORIGIN" value="195"/>
 		<item key="DIALOG_WIDTH" value="322"/>
 		<item key="DIALOG_HEIGHT" value="391"/>

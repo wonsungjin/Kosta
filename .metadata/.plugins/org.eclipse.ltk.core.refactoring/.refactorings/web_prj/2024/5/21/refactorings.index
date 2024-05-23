@@ -13,3 +13,6 @@
 1716347396644	Move compilation unit
 1716347426143	Move 'lec_servlet_call.jsp' to 'webapp'
 1716358096102	Delete element
+1716435786477	Rename resource 'tables.html'
+1716441202464	Copy compilation unit
+1716441215254	Rename type 'BoardServlet2'

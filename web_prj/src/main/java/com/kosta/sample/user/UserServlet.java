@@ -1,11 +1,12 @@
 package com.kosta.sample.user;
 import java.io.IOException;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import com.kosta.sample.common.MyOracleConnection;
+import javax.servlet.http.HttpSession;
 
 /**
  * Servlet implementation class UserServlet
@@ -27,10 +28,14 @@ public class UserServlet extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		System.out.print(request.getContextPath());
+		HttpSession session = request.getSession();
+		session.removeAttribute("KEY_SESS_USERID");
+		session.removeAttribute("KEY_SESS_UNAME");
+		session.removeAttribute("KEY_SESS_GRADE");
+		session.invalidate();//한번에지우기
+		session.setMaxInactiveInterval(0);//세션유효시간 0초설정
 		
-		// response.getWriter().append("Served at: ").append(request.getContextPath());
+		response.sendRedirect("index.jsp");
 	
 	}
 
@@ -64,6 +69,14 @@ public class UserServlet extends HttpServlet {
 				UserVO vo1 = dao.userLogin(userid,passwd);
 				if(vo1 != null)//성공
 				{
+					System.out.print("세션할당");
+					HttpSession session = request.getSession();
+					session.setAttribute("KEY_SESS_USERID", vo1.getUserid());
+					session.setAttribute("KEY_SESS_UNAME", vo1.getUname());
+					session.setAttribute("KEY_SESS_GRADE", vo1.getGrade());
+					
+					
+				
 					response.sendRedirect("index.jsp");
 				}
 				else//실패

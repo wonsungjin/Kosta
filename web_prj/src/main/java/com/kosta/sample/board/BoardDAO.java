@@ -43,9 +43,9 @@ public class BoardDAO {
 
 			String sql = "insert into board values(board_seq.nextval,?,?,?,sysdate)";
 			pstmt = conn.prepareStatement(sql);
-			pstmt.setString(1, bvo.getTITLE());
-			pstmt.setString(2, bvo.getCONTENTS());
-			pstmt.setString(3, bvo.getREGID());
+			pstmt.setString(1, bvo.getTitle());
+			pstmt.setString(2, bvo.getContents());
+			pstmt.setString(3, bvo.getRegid());
 			insertRows = pstmt.executeUpdate();
 		} catch (SQLException e) {
 			e.printStackTrace();
@@ -69,9 +69,9 @@ public class BoardDAO {
 
 			String sql = "update board set title=?, contents=? where seq=?";
 			pstmt = conn.prepareStatement(sql);
-			pstmt.setString(1, bvo.getTITLE());
-			pstmt.setString(2, bvo.getCONTENTS());
-			pstmt.setInt(3, bvo.getSEQ());
+			pstmt.setString(1, bvo.getTitle());
+			pstmt.setString(2, bvo.getContents());
+			pstmt.setInt(3, bvo.getSeq());
 			updateRows = pstmt.executeUpdate();
 		} catch (SQLException e) {
 			e.printStackTrace();
@@ -124,11 +124,11 @@ public class BoardDAO {
 			list = new ArrayList();
 			while (rs.next() == true) {
 				BoardVO vo= new BoardVO
-				(rs.getString("CONTENTS"),
-				rs.getString("REGDATE"),
-				rs.getInt("SEQ"),
-				rs.getString("TITLE"),
-				rs.getString("REGID"));
+				(rs.getString("contents"),
+				rs.getString("regdate"),
+				rs.getInt("seq"),
+				rs.getString("title"),
+				rs.getString("regid"));
 				list.add(vo);
 			}
 		} catch (SQLException e) {
@@ -190,10 +190,10 @@ public class BoardDAO {
 			while (rs.next() == true) {
 				if(vo==null) vo= new BoardVO
 				(
-				rs.getString("TITLE"),
-				rs.getInt("SEQ"),
-				rs.getString("REGDATE"),
-				rs.getString("REGID"));
+				rs.getString("title"),
+				rs.getInt("seq"),
+				rs.getString("regdate"),
+				rs.getString("regid"));
 				ReplyVO rvo = new ReplyVO
 				(rs.getInt("RSEQ"),
 				rs.getString("REPLY"),
