@@ -1,0 +1,7 @@
+/**
+ * my last test.
+ */
+function testPrint()
+{
+	console.log("my test");
+}

@@ -64,7 +64,19 @@ public class BoardServlet extends HttpServlet {
 		//doGet(request, response);
 		request.setCharacterEncoding("UTF-8");
 		response.setContentType("text/html;charset=euc-kr");
-		
+		String pagecode = request.getParameter("pagecode");
+		if(pagecode.endsWith("B003"))
+		{
+			String contents = request.getParameter("contents");
+			String title = request.getParameter("title");
+			String regdate = request.getParameter("regdate");
+			System.out.println(title+"\t"+contents+"\t");
+			System.out.println("regdate: "+regdate);
+		}
+		else if(pagecode.endsWith("B004"))
+		{
+			System.out.println("삭제");
+		}
 		response.getWriter().append("post").append(request.getContextPath());
 
 	}

@@ -95,10 +95,10 @@ public class BoardDAO {
 			while (rs.next() == true) {
 				BoardVO vo= new BoardVO
 				(rs.getString("CONTENTS"),
-				rs.getString("REGDATE"),
+						rs.getString("TITLE"),
 				rs.getInt("SEQ"),
-				rs.getString("TITLE"),
-				rs.getString("REGID"));
+				rs.getString("REGID"),
+				rs.getString("REGDATE"));
 				list.add(vo);
 			}
 		} catch (SQLException e) {
@@ -125,10 +125,10 @@ public class BoardDAO {
 			while (rs.next() == true) {
 				BoardVO vo= new BoardVO
 				(rs.getString("contents"),
-				rs.getString("regdate"),
-				rs.getInt("seq"),
-				rs.getString("title"),
-				rs.getString("regid"));
+						rs.getString("title"),
+						rs.getInt("seq"),
+						rs.getString("regid"),
+				rs.getString("regdate"));
 				list.add(vo);
 			}
 		} catch (SQLException e) {

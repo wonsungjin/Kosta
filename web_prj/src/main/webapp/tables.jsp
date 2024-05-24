@@ -150,18 +150,18 @@
                                         </tr>
                                     </tfoot>
                                     <tbody>
-                                        <<%
+                                        <%
 ArrayList<BoardVO> list = (ArrayList<BoardVO>)request.getAttribute("KEY_BOARDLIST");
 for(BoardVO vo : list)
 {
-	int seq = vo.getSEQ();
-	String title = vo.getTITLE();
-	String contents = vo.getCONTENTS();
-	String regid = vo.getREGID();
-	String regdate = vo.getREGDATE();%>
+	int seq = vo.getSeq();
+	String title = vo.getTitle();
+	String contents = vo.getContents();
+	String regid = vo.getRegid();
+	String regdate = vo.getRegdate();%>
 	
 	<tr>
-        <td><%=vo.getSEQ()%></td>
+        <td><%=seq%></td>
         <td><a href = "<%=request.getContextPath()%>/BoardServlet?pagecode=B002&seq=<%=seq%>"><%=title%></td>
         <td><%=regid%></td>
         <td><%=regdate%></td>
