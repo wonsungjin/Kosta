@@ -2,7 +2,9 @@
 	pageEncoding="UTF-8"%>
 
 <%@ page import="java.util.ArrayList"%>
+<%@ page import="java.util.List"%>
 <%@ page import="com.kosta.sample.board.BoardVO"%>
+<%@ page import="com.kosta.sample.board.ReplyVO"%>
 
 
 <!DOCTYPE html>
@@ -169,7 +171,7 @@
 
 						<!--  ------------------ BOARD 연결------------------------ -->
 						<a class="nav-link"
-							href="<%=request.getContextPath()%>/BoardServlet">
+							href="<%=request.getContextPath()%>/BoardServlet?pagecode=B001">
 							<div class="sb-nav-link-icon">
 								<i class="fas fa-table"></i>
 							</div> Tables
@@ -208,14 +210,27 @@ if (grade != null) {
 						String contents = "";
 						String regid = "";
 						String regdate = "";
+						List<ReplyVO> replies = null;
+						
+						int rseq = 0;
+						String reply = "";
+						String rregid = "";
+						String rregdate = "";
 						for (BoardVO vo : list) {
 							seq = vo.getSeq();
 							title = vo.getTitle();
 							contents = vo.getContents();
 							regid = vo.getRegid();
 							regdate = vo.getRegdate();
-
-							System.out.println(seq + "- " + title + "- " + contents + "- " + regid + "- " + regdate);
+							replies = vo.getReplies();
+							for(ReplyVO rvo : replies)
+							{
+								rregid = rvo.getRegid();
+								rregdate = rvo.getRegdate();
+								reply = rvo.getReply();
+								rseq = rvo.getRseq();
+								//System.out.println(seq + "- " + title + "- " + contents + "- " + regid + "- " + regdate);
+							}
 						}
 						%>
 
@@ -234,6 +249,13 @@ if (grade != null) {
 										$("#correctionForm").attr("action","/BoardServlet?pagecode=B004");
 										$("#correctionForm").submit();
 									});
+							$("#reply").click(  function()
+									{
+										$("#replyForm").attr("method","post");
+										$("#replyForm").attr("action","/BoardServlet?pagecode=B006&seq=<%=seq%>");
+										$("#replyForm").submit();
+									});
+							//$("#list").click
 						});
 						</script>
 						</head>
@@ -280,10 +302,29 @@ if (grade != null) {
 											<a input type="button" name="delete" id="delete"
 												class="btn btn-primary btn-block" value="삭제">삭제</a> 
 									
-												<a class="btn btn-primary btn-block" href = <%=request.getContextPath()%>/BoardServlet?pagecode=B001>목록</a>
+												<a name="list" id="list" class="btn btn-primary btn-block">목록</a>
 									</td>
 							</table>
 												</form>
+												<br>
+<table width=100% border=1>
+												<%if(reply!=null) {
+													for(ReplyVO rvo : replies)
+													{
+	%>
+<font color=red><a type = "button" href = "/BoardServlet?pagecode=B005&rseq=<%=rvo.getRseq()%>&seq=<%=seq%>">[X]</a></font><%=rvo.getReply()%></td></tr>
+<br>
+<%}}%>
+<form name="replyForm" id="replyForm" method="post">
+<table width=100% border=1>
+<tr>
+	<td>
+		<input type="text" size=100 name="replyContents">
+		<input name="reply" id="reply" type="submit" value="댓글등록">
+	</td>
+</tr>
+</table>
+</form>
 
 						</div>
 					</div>

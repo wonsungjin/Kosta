@@ -124,7 +124,7 @@
                 <main>
                     <div class="container-fluid px-4">
                         <h1 class="mt-4">Dashboard<!--  세션보이기 -->
-<%=session.getAttribute("KEY_SESS_GRADE") %>님 환영합니다.
+<%=session.getAttribute("KEY_SESS_UNAME")%>님 환영합니다.
 <% 
 if(grade!=null){
 	if(grade.equals("u")) out.println("사용자");

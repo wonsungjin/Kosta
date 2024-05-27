@@ -6,23 +6,23 @@
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
-		<item key="selection" value="text"/>
+		<item key="selection" value="System.ou"/>
 		<list key="findhistory">
+			<item value="System.ou"/>
+			<item value="key_s"/>
+			<item value="key_se"/>
+			<item value="boardser"/>
+			<item value="board"/>
+			<item value="KEY_"/>
+			<item value="환영"/>
 			<item value="text"/>
 			<item value="boards"/>
-			<item value="board"/>
 			<item value="regbtn"/>
 			<item value="my.js"/>
 			<item value="setCharacterEncodingFilter"/>
 			<item value="tables.jsp"/>
 			<item value="tables"/>
 			<item value="table"/>
-			<item value="borad"/>
-			<item value="tables."/>
-			<item value="tables.html"/>
-			<item value="Login"/>
-			<item value="Login out"/>
-			<item value="/Login.jsp"/>
 		</list>
 		<list key="replacehistory">
 			<item value="tables.jsp"/>
@@ -33,7 +33,7 @@
 		</list>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
-		<item key="DIALOG_X_ORIGIN" value="3"/>
+		<item key="DIALOG_X_ORIGIN" value="8"/>
 		<item key="DIALOG_Y_ORIGIN" value="266"/>
 		<item key="DIALOG_WIDTH" value="322"/>
 		<item key="DIALOG_HEIGHT" value="388"/>

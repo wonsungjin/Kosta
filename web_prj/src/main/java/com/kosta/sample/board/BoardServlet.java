@@ -47,11 +47,20 @@ public class BoardServlet extends HttpServlet {
 		{
 			int seq = Integer.parseInt(request.getParameter("seq"));
 			BoardDAO bd = new BoardDAO();
-			ArrayList<BoardVO> list = bd.boardSelectOne(seq);
+			ArrayList<BoardVO> list = bd.boardReplySelect(seq);
+			for(ReplyVO rv : list.get(0).getReplies())
+			System.out.println(rv.getReply());
 			request.setAttribute("KEY_BOARDLIST",list);
-			System.out.print(list.size());
 			RequestDispatcher rd =  request.getRequestDispatcher("tables_detail.jsp");
 			rd.forward(request, response);
+		}
+		else if(pagecode.endsWith("B005"))//댓글삭제
+		{
+			BoardDAO bd = new BoardDAO();
+			int rseq= Integer.parseInt(request.getParameter("rseq"));
+			int deleteRows = bd.replyDelete(rseq);
+			response.sendRedirect(request.getContextPath()+"/BoardServlet?pagecode=B002&seq="+request.getParameter("seq"));
+			
 		}
 		else response.sendRedirect("500.html");
 		
@@ -65,17 +74,39 @@ public class BoardServlet extends HttpServlet {
 		request.setCharacterEncoding("UTF-8");
 		response.setContentType("text/html;charset=euc-kr");
 		String pagecode = request.getParameter("pagecode");
+		BoardDAO dao = new BoardDAO();
 		if(pagecode.endsWith("B003"))
 		{
-			String contents = request.getParameter("contents");
-			String title = request.getParameter("title");
-			String regdate = request.getParameter("regdate");
-			System.out.println(title+"\t"+contents+"\t");
-			System.out.println("regdate: "+regdate);
+			BoardVO vo = new BoardVO(request.getParameter("contents"),
+					request.getParameter("title"),
+					Integer.parseInt(request.getParameter("seq")),
+					request.getParameter("regid"),
+					request.getParameter("regdate")
+					);
+			int a = dao.boardUpdate(vo);
+			if(a >= 1)
+			{
+				String url = request.getContextPath()+"/BoardServlet?seq="+request.getParameter("seq")+"&pagecode=B002";
+				response.sendRedirect(url);
+			}
+			else response.sendRedirect("500.html");
 		}
 		else if(pagecode.endsWith("B004"))
 		{
 			System.out.println("삭제");
+			int a =  dao.boardDelete(Integer.parseInt(request.getParameter("seq")));
+			if(a >=1)
+			{
+				response.sendRedirect(request.getContextPath()+"/BoardServlet?pagecode=B001");
+			}
+			else response.sendRedirect("500.html");
+		}
+		else if(pagecode.endsWith("B006"))//댓글 등록
+		{
+			if(request.getParameter("replyContents").equals("")) {response.sendRedirect(request.getContextPath()+"/BoardServlet?pagecode=B002&seq="+request.getParameter("seq"));}
+			else {
+			dao.replyInsert(Integer.parseInt(request.getParameter("seq")),request.getParameter("replyContents"));
+			response.sendRedirect(request.getContextPath()+"/BoardServlet?pagecode=B002&seq="+request.getParameter("seq"));}
 		}
 		response.getWriter().append("post").append(request.getContextPath());
 

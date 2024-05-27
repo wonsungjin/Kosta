@@ -90,17 +90,17 @@ public class MyOracleConnection {
 	}
 
 	public static void main(String[] args) {
-		BoardDAO bd = new BoardDAO();
-		BoardVO bvo = bd.boardReplySelect(1);
-		int seq = bvo.getSeq();
-		String title = bvo.getTitle();
-		System.out.println(seq + "\t" + title);
-		List<ReplyVO> rlist = bvo.getReplies();
-
-		for (ReplyVO ass : rlist) {
-			System.out.print(ass.getRseq() + "  ");
-			System.out.print(ass.getReply() + "\n");
-		}
+//		BoardDAO bd = new BoardDAO();
+//		BoardVO bvo = bd.boardReplySelect(1);
+//		int seq = bvo.getSeq();
+//		String title = bvo.getTitle();
+//		System.out.println(seq + "\t" + title);
+//		List<ReplyVO> rlist = bvo.getReplies();
+//
+//		for (ReplyVO ass : rlist) {
+//			System.out.print(ass.getRseq() + "  ");
+//			System.out.print(ass.getReply() + "\n");
+//		}
 
 	}
 }
