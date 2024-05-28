@@ -1,0 +1,59 @@
+package com.kosta.sample.rest;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.util.ArrayList;
+import java.util.HashMap;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import com.google.gson.Gson;
+
+@WebServlet("/RestServlet")
+public class RestServlet extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+       
+    public RestServlet() {
+        super();
+    }
+
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		request.setCharacterEncoding("UTF-8");
+		response.setContentType("text/html;charset=UTF-8");
+		
+		
+		String searchGubun = request.getParameter("searchGubun");
+		String searchStr   = request.getParameter("searchStr");
+		
+		String responseStr = "이건 서버가 보낸 메세지";
+		Gson gson = new Gson();
+		HashMap map = new HashMap<String,String>();
+		map.put("empno", "7733");
+		map.put("ename", "smith");
+		
+		System.out.println(map.get("ename"));
+		System.out.println(map);
+		
+		String ms = gson.toJson(map);//json형식변환
+		System.out.println(ms);
+		
+		HashMap res = gson.fromJson(ms, HashMap.class);//다시 맵변환
+		System.out.println(res);
+		//--------------
+		ArrayList<HashMap<String,String>> list = new ArrayList<HashMap<String,String>>();
+		list.add(map);
+		String ms2 = gson.toJson(list);
+		System.out.println(ms2);
+		ArrayList res2 = gson.fromJson(ms2, ArrayList.class);
+		PrintWriter out = response.getWriter();
+		out.println(ms2);
+	}
+
+//	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+//		doGet(request, response);
+//	}
+
+}

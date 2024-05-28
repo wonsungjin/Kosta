@@ -1,0 +1,96 @@
+package com.kosta.sample.rest;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.stream.Collectors;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import com.google.gson.Gson;
+import com.kosta.sample.board.BoardVO;
+
+
+@WebServlet("/RestServlet")
+public class RestServlet extends HttpServlet {
+    private static final long serialVersionUID = 1L;
+
+    public RestServlet() {
+        super();
+    }
+
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+
+        request.setCharacterEncoding("UTF-8");
+        response.setContentType("text/html;charset=UTF-8");
+        
+        String pagecode = request.getParameter("pagecode");
+        if(pagecode.equals("R001")) {
+        	String searchGubun = request.getParameter("searchGubun");
+        	String searchStr   = request.getParameter("searchStr");
+        	System.out.println(searchGubun + "," + searchStr);
+        	
+        	ArrayList<BoardVO> list = new ArrayList<BoardVO>(); 
+            BoardVO bvo = new BoardVO();
+            bvo.setTitle("aaa");
+            bvo.setRegid("kim"); //[{"title" = "aaa", "regid" = "kim"}}] 형태가 되었다.
+            list.add(bvo);
+
+            bvo = new BoardVO(); //[{"title" = "bbb", "regid" = "hong"}}] 형태가 되었다.
+            bvo.setTitle("bbb");
+            bvo.setRegid("hong");
+            list.add(bvo);
+
+
+            Gson gson = new Gson();
+            String gsonString = gson.toJson(list); 
+            System.out.println(gsonString + "," + gsonString.getClass());
+
+
+            PrintWriter out = response.getWriter(); 
+            out.println(gsonString); 
+        }
+
+    }
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    	request.setCharacterEncoding("UTF-8");
+        response.setContentType("text/html;charset=UTF-8");
+        String pagecode = request.getParameter("pagecode");
+        Gson gson = new Gson();
+        if(pagecode.equals("R002")) {
+        	String str = request.getParameter("MY_JSONKEY");
+        	System.out.println("2번"+str);
+        	
+        	PrintWriter out = response.getWriter();
+        	
+        	
+        }else if(pagecode.equals("R003")) {
+        	String jsonStr = request.getReader().lines().collect(Collectors.joining());
+        	System.out.println(jsonStr);
+        	BoardVO vo = gson.fromJson(jsonStr,BoardVO.class);
+        	System.out.println(vo.getContents());
+//        	HashMap<String,String> map = gson.fromJson(jsonStr, HashMap.class);
+//        	System.out.println(map.get("pw"));
+        	PrintWriter out = response.getWriter();
+        } else if(pagecode.equals("R004")) {
+        	response.setContentType("application/json;charset=UTF-8");
+        	String jsonStr = "{\"status\":\"200\",\"message\":\"R004 응답 ok\"}";
+        	HashMap<String,String> map = gson.fromJson(jsonStr,HashMap.class);
+        	PrintWriter out = response.getWriter();
+    	} else if(pagecode.equals("R005")) {
+    		response.setContentType("application/json;charset=UTF-8");
+    		
+        	PrintWriter out = response.getWriter();
+        } else if(pagecode.equals("R006")) {
+        	response.setContentType("application/json;charset=UTF-8");
+        	
+        	PrintWriter out = response.getWriter();
+        } 
+        
+    }
+}
