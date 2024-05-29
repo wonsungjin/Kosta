@@ -1,0 +1,21 @@
+package com.kosta.sample.chart;
+
+import java.util.ArrayList;
+
+public class EmpDAO {
+	public ArrayList<EmpVO> empSelect()
+	{
+		ArrayList<EmpVO> list = new ArrayList<EmpVO>();
+		return list;
+	}
+	public static void main(String[] args)
+	{
+		EmpDAO dao = new EmpDAO();
+		ArrayList<EmpVO> list = dao.empSelect();
+		for(EmpVO vo : list)
+		{
+			System.out.println(vo.getSal());
+		}
+	}
+
+}
