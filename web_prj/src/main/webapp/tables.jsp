@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%> 
 <%@ page import = "java.util.ArrayList"%>
 <%@ page import = "com.kosta.sample.board.BoardVO"%>
 <!DOCTYPE html>
@@ -150,23 +151,18 @@
                                         </tr>
                                     </tfoot>
                                     <tbody>
-                                        <%
-ArrayList<BoardVO> list = (ArrayList<BoardVO>)request.getAttribute("KEY_BOARDLIST");
-for(BoardVO vo : list)
-{
-	int seq = vo.getSeq();
-	String title = vo.getTitle();
-	String contents = vo.getContents();
-	String regid = vo.getRegid();
-	String regdate = vo.getRegdate();%>
-	
+<c:if test="${not empty KEY_BOARDLIST}">
+	<c:forEach items="${KEY_BOARDLIST}" var="mybvo" varStatus="mysts">
+
 	<tr>
-        <td><%=seq%></td>
-        <td><a href = "<%=request.getContextPath()%>/BoardServlet?pagecode=B002&seq=<%=seq%>"><%=title%></td>
-        <td><%=regid%></td>
-        <td><%=regdate%></td>
+        <td>${mybvo.seq}</td>
+        <td><a href = "/BoardServlet?pagecode=B002&seq=${mybvo.seq}">${mybvo.title}</td>
+        <td>${mybvo.regid}</td>
+        <td>${mybvo.regdate}</td>
 	    </tr>
-<%}%>
+	</c:forEach>
+</c:if>
+
                                     </tbody>
                                 </table>
                             </div>

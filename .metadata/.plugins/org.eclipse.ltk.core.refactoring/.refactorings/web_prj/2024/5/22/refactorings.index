@@ -4,3 +4,7 @@
 1716947131119	Delete element
 1716961145045	Move 'lec_chart_rest.jsp' to 'webapp'
 1716964867251	Delete element
+1717034548061	Move compilation unit
+1717034560418	Rename compilation unit 'lec_jstl_servlet.java'
+1717042650796	Rename package 'com.kosta.sampe.jstl'
+1717047035025	Copy file
